@@ -114,6 +114,7 @@ html {
 	font-weight: bold;
 	color: black;
 	display: block;
+	touch-action: manipulation;
 }
 .tallButton:hover {
 	cursor: pointer;
@@ -137,6 +138,7 @@ html {
 	margin-left: auto;
 	margin-right: auto;
 	background-color:var(--middle-colour);
+	touch-action: manipulation;
 }
 .round {
 	border-radius: 15px;
@@ -153,12 +155,30 @@ html {
 		color:var(--textcolour);
 	}
 }
-@media (max-width: 1639px) {
+@media (max-width: 1640px) {
 	.round2 {
 		border-radius: 10px;
 		width: 75px;
 		height: 75px;
 		font-size: 15px;
+		color:var(--textcolour);
+	}
+}
+@media (max-width: 1220px) {
+	.round2 {
+		border-radius: 10px;
+		width: 50px;
+		height: 50px;
+		font-size: 10px;
+		color:var(--textcolour);
+	}
+}
+@media (max-width: 870px) {
+	.round2 {
+		border-radius: 10px;
+		width: 40px;
+		height: 40px;
+		font-size: 8px;
 		color:var(--textcolour);
 	}
 }
@@ -206,7 +226,7 @@ html {
 	table-layout: fixed;
 	width: 0px;
 }
-#mouseOver1, #mouseOver2, #mouseOver3, #mouseOver4 {
+#mouseOver1, #mouseOver2, #mouseOver3, #mouseOver4, #mouseOver5 {
 	width: 500px;
 	height: 86px;
 	background-color: black;
@@ -228,6 +248,115 @@ html {
 .glodShopTd:hover span {
 	display: block;
 	position: fixed;
+}
+/* Options Menu */
+.optionsTd {
+	width: 5%;
+	table-layout: fixed;
+	padding: 0;
+}
+.optionsButton {
+	border-radius: 10px;
+	font-size: 30px;
+	width: 250px;
+	height: 100px;
+	color:var(--textcolour);
+	touch-action: manipulation;
+}
+@media (min-width: 1530px) {
+	.optionsButton {
+		width: 250px;
+		height: 100px;
+	}
+}
+@media (max-width: 1530px) {
+	.optionsButton {
+		width: 200px;
+		height: 75px;
+		font-size: 24px;
+	}
+} 
+@media (max-width: 1230px) {
+	.optionsButton {
+		width: 150px;
+		height: 65px;
+		font-size: 17px;
+	}
+} 
+@media (max-width: 900px) {
+	.optionsButton {
+		width: 100px;
+		height: 50px;
+		font-size: 12px;
+	}
+} 
+.slidecontainer {
+  width: 100%;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 15px;
+  border-radius: 8px;
+  background: var(--textcolour);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--second-lightest);
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--second-lightest);
+  cursor: pointer;
+}
+/* Confirmation screen */
+.confirmButton {
+	border-radius: 0px;
+	font-size: 30px;
+	width: 100%;
+	height: 25%;
+	color: #000000;
+	background-color: #ff614f;
+	display: inline-block;
+}
+.denyButton {
+	border-radius: 0px;
+	font-size: 30px;
+	width: 100%;
+	height: 25%;
+	color: #000000;
+	background-color: #aeff6b;
+	display: inline-block;
+}
+/* Shortcuts Menu */
+.shortcutsTd {
+	table-layout: fixed;
+	width: 50%;
+	padding: 0px;
+	margin: 0px;
+	border: 5px solid black;
+}
+.shortcutsTable {
+	table-layout: fixed;
+	width: 0px;
+	height: 100%;
+	bottom: 0px;
+	position: absolute;
 }
 /* Popups */
 #greyOut1, #greyOut2 {
@@ -286,6 +415,28 @@ html {
 	z-index: 11;
 	background-color: var(--second-lightest);
 }
+#shortcuts {
+	border: 5px solid black;
+	border-radius: 15px;
+	width: 50%;
+	height: 75%;
+	left: 25%;
+	top: 12.5%;
+	position: absolute;
+	z-index: 11;
+	background-color: var(--second-lightest);
+}
+#confirmation {
+	border: 5px solid black;
+	border-radius: 15px;
+	width: 35%;
+	height: 35%;
+	left: 32.5%;
+	top: 32.5%;
+	position: absolute;
+	z-index: 12;
+	background-color: var(--second-lightest);
+}
 #closeButton {
 	right: 0;
 	margin-right: 26%;
@@ -298,7 +449,6 @@ html {
 	position: fixed;
 	z-index: 14;
 }
-
 
 /* width */
 ::-webkit-scrollbar {
